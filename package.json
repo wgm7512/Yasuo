@@ -1,0 +1,46 @@
+{
+  "name": "yasuo",
+  "version": "0.0.1",
+  "description": "react脚手架，内置 react-router, react-sage, axios ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wgm7512/yasuo.git"
+  },
+  "bin": {
+    "yasuo-cli": "./bin/bin.js",
+    "ys-cli": "./bin/bin.js",
+    "yasou": "./bin/bin.js",
+    "ys": "./bin/bin.js"
+  },
+  "keywords": [
+    "react",
+    "cli",
+    "yasuo",
+    "yasuo-cli"
+  ],
+  "author": "wgm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wgm7512/yasuo/issues"
+  },
+  "homepage": "https://github.com/wgm7512/yasuo#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "download-git-repo": "^3.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "inquirer": "^8.2.0",
+    "log-symbols": "^5.0.0",
+    "ora": "^6.0.1",
+    "typescript": "^4.4.4",
+    "typescript-loader": "^1.1.3",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
