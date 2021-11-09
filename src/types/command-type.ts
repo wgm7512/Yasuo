@@ -6,7 +6,7 @@ export interface ICommand {
   command: string,
   description: string,
   options?: any[];
-  action: IActionType;
+  action: IActionType
 }
 
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "lint": "eslint --ext .ts src"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,11 @@
   },
   "keywords": [
     "react",
+    "react-cli",
     "cli",
     "yasuo",
+    "ys",
+    "ys-cli",
     "yasuo-cli"
   ],
   "author": "wgm",
@@ -52,8 +56,11 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
     "rollup": "^2.59.0",
     "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",

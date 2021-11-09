@@ -8,7 +8,7 @@ const createCommand: ICommand = {
 
 
 function handleCreateAction(projectName) {
-  console.log(projectName);
+  console.log(projectName)
 }
 
 
