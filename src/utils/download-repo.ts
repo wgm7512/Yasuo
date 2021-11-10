@@ -7,8 +7,7 @@ import downloadGit from 'download-git-repo';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function downloadRepo(api: string, projectName: string): Promise<any> {
   return new Promise((resolve, reject) => {
-    downloadGit(`direct:${api}`, projectName, {}, function (err) {
-      console.log(err);
+    downloadGit(`direct:${api}`, projectName, { clone: true }, function (err) {
       if (err) reject(err);
       resolve(1);
     });
