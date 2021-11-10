@@ -13,9 +13,16 @@
     "importHelpers": false,
     "strictNullChecks": false,
     "allowUnreachableCode": true,
-    "lib": ["es6"],
-    "typeRoots": ["./node_modules/@types"],
-    "rootDir": "./src" // 仅用来控制输出的目录结构
+    "lib": [
+      "es6"
+    ],
+    "baseUrl": ".", // 基础目录
+    "paths": {
+      // alias配置
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "exclude": [ // 不参与打包的目录
     "node_modules",
