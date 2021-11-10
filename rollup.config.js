@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
-import { eslint } from 'rollup-plugin-eslint';
 
 
 export default {
@@ -14,13 +13,6 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    // 验证导入的文件
-    eslint({
-      throwOnError: true, // lint 结果有错误将会抛出异常
-      throwOnWarning: true,
-      include: ['src/**/*.ts'],
-      exclude: ['node_modules/**', 'lib/**', '*.js'],
-    }),
     // 打包之前先清空
     clear({
       targets: ['dist'],

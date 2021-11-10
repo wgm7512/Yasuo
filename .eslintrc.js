@@ -5,7 +5,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // ts 推荐规则
   ],
   plugins: [
-    '@typescript-eslint',
+    '@typescript-eslint/eslint-plugin',
   ],
   env: {
     browser: true,
@@ -15,4 +15,4 @@ module.exports = {
   rules: {
     "semi": 2,
   }, // 自定义
-}
+};
