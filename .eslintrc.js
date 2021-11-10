@@ -14,5 +14,7 @@ module.exports = {
   },
   rules: {
     "semi": 2,
-  }, // 自定义
+    // 保存代码时缩进2个空格
+    "indent": ['error', 2],
+  },
 };
