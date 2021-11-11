@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = downloadRepo;
+exports.default = downloadRepo;
 
 var _downloadGitRepo = _interopRequireDefault(require("download-git-repo"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * @param api 仓库地址
@@ -15,8 +15,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function downloadRepo(api, projectName) {
-  return new Promise(function (resolve, reject) {
-    (0, _downloadGitRepo["default"])("direct:".concat(api), projectName, {
+  return new Promise((resolve, reject) => {
+    (0, _downloadGitRepo.default)(`direct:${api}`, projectName, {
       clone: true
     }, function (err) {
       if (err) reject(err);

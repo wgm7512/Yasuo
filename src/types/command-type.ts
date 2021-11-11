@@ -11,6 +11,4 @@ export interface ICommand {
   action: IActionType
 }
 
-
-
 export type ICommands = ICommand[];

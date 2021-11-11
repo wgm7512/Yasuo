@@ -9,12 +9,12 @@ var _ora = _interopRequireDefault(require("ora"));
 
 var _chalk = _interopRequireDefault(require("chalk"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var spinner = (0, _ora["default"])();
+const spinner = (0, _ora.default)();
 
-var startSpinner = function startSpinner(text) {
-  var msg = "".concat(text, "...\n");
+const startSpinner = text => {
+  const msg = `${text}...\n`;
   spinner.start(msg);
   spinner.stopAndPersist({
     symbol: '✨',
@@ -24,17 +24,17 @@ var startSpinner = function startSpinner(text) {
 
 exports.startSpinner = startSpinner;
 
-var succeedSpiner = function succeedSpiner(text) {
+const succeedSpiner = text => {
   spinner.stopAndPersist({
     symbol: '🎉',
-    text: "".concat(text, "\n")
+    text: `${text}\n`
   });
 };
 
 exports.succeedSpiner = succeedSpiner;
 
-var failSpinner = function failSpinner(text) {
-  spinner.fail(_chalk["default"].red(text));
+const failSpinner = text => {
+  spinner.fail(_chalk.default.red(text));
 };
 
 exports.failSpinner = failSpinner;
