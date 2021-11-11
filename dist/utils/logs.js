@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.succeedSpiner = exports.startSpinner = exports.failSpinner = void 0;
+exports.succeedSpiner = exports.startSpinner = exports.infoSpiner = exports.indentSpiner = exports.failSpinner = void 0;
 
 var _ora = _interopRequireDefault(require("ora"));
 
@@ -16,13 +16,21 @@ const spinner = (0, _ora.default)();
 const startSpinner = text => {
   const msg = `${text}...\n`;
   spinner.start(msg);
-  spinner.stopAndPersist({
-    symbol: '✨',
-    text: msg
-  });
 };
 
 exports.startSpinner = startSpinner;
+
+const infoSpiner = text => {
+  spinner.info(_chalk.default.cyan(`\n${text}\n`));
+};
+
+exports.infoSpiner = infoSpiner;
+
+const indentSpiner = text => {
+  _chalk.default.whiteBright(text);
+};
+
+exports.indentSpiner = indentSpiner;
 
 const succeedSpiner = text => {
   spinner.stopAndPersist({
@@ -34,7 +42,7 @@ const succeedSpiner = text => {
 exports.succeedSpiner = succeedSpiner;
 
 const failSpinner = text => {
-  spinner.fail(_chalk.default.red(text));
+  spinner.fail(`${text}\n`);
 };
 
 exports.failSpinner = failSpinner;

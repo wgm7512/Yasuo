@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function downloadRepo(api, projectName) {
   return new Promise((resolve, reject) => {
-    (0, _downloadGitRepo.default)(`direct:${api}`, projectName, {
+    (0, _downloadGitRepo.default)(`direct:${api}#master`, projectName, {
       clone: true
     }, function (err) {
       if (err) reject(err);

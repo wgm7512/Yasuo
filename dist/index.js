@@ -4,11 +4,15 @@ var _commander = require("commander");
 
 var _create = _interopRequireDefault(require("./commands/create"));
 
+var _list = _interopRequireDefault(require("./commands/list"));
+
+var _add = _interopRequireDefault(require("./commands/add"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 获取命令
 function getCommands() {
-  return [_create.default];
+  return [_create.default, _list.default, _add.default];
 }
 
 function initCommand(commands) {

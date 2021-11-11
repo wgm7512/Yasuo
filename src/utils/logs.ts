@@ -6,10 +6,14 @@ const spinner = ora();
 export const startSpinner = (text?: string) => {
   const msg = `${text}...\n`;
   spinner.start(msg);
-  spinner.stopAndPersist({
-    symbol: '✨',
-    text: msg,
-  });
+};
+
+export const infoSpiner = (text: string) => {
+  spinner.info(chalk.cyan(`\n${text}\n`));
+};
+
+export const indentSpiner = (text: string) => {
+  chalk.whiteBright(text);
 };
 
 export const succeedSpiner = (text?: string) => {
@@ -20,5 +24,5 @@ export const succeedSpiner = (text?: string) => {
 };
 
 export const failSpinner = (text?: string) => {
-  spinner.fail(chalk.red(text));
+  spinner.fail( `${text}\n`);
 };

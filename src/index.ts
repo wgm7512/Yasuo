@@ -1,11 +1,15 @@
 import { program } from 'commander';
 import { ICommands } from "./types/command-type";
 import createCommand from "./commands/create";
+import listCommand from "./commands/list";
+import addCommand from "./commands/add";
 
 // 获取命令
 function getCommands(): ICommands {
   return [
     createCommand,
+    listCommand,
+    addCommand
   ];
 }
 
